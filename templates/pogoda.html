@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Pogoda – Kraków</h1>
+{% if weather %}
+    <p><strong>Temperatura:</strong> {{ weather['temp'] }}°C</p>
+    <p><strong>Opis:</strong> {{ weather['description'] }}</p>
+    <p><strong>Wilgotność:</strong> {{ weather['humidity'] }}%</p>
+{% else %}
+    <p>Nie udało się pobrać danych pogodowych.</p>
+{% endif %}
+{% endblock %}
