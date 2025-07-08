@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ Baza }}</title>
+    <style>
+        body { font-family: sans-serif; background: #f2f2f2; margin: 0; }
+        nav { background: #333; padding: 1em; }
+        nav a {
+            color: white; margin: 0 1em; text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover { text-decoration: underline; }
+        .container { padding: 2em; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/pogoda">Pogoda</a>
+        <a href="/mapa">Mapa chmur</a>
+    </nav>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
